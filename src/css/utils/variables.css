@@ -1,0 +1,20 @@
+:root {
+    /* Цвета */
+    --light-bg: #fafaff;
+    --dark-text: #1c1c1c;
+    --pink: #ff84d5;
+
+    --dark-text-rgb: 28, 28, 28;
+    --light-bg-rgb: 231, 231, 241;
+    --pink-rgb: 253, 132, 212;
+
+    /* Градиенты */
+
+    /* Радиусы */
+    --border-radius: 32px;
+    --two-border-radius: 64px;
+
+    /*  Шрифт  */
+    --geist-bold-font: 'geist-bold','Roboto', sans-serif;
+    --geist-rg-font: 'geist-regular','Roboto', sans-serif;
+}

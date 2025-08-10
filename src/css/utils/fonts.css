@@ -1,0 +1,9 @@
+@font-face {
+    font-family: "geist-bold";
+    src: url("/fonts/geist-bold.ttf");
+}
+
+@font-face {
+    font-family: "geist-regular";
+    src: url("/fonts/geist-regular.ttf");
+}

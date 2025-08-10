@@ -1,0 +1,29 @@
+/* Общие параметры */
+body {
+    background-color: var(--light-bg);
+    font-family: var(--geist-rg-font);
+}
+
+
+/* Выделение мыши */
+::selection {
+    background-color: var(--dark-text);
+    color: var(--pink);
+}
+
+/* Скроллбар */
+html {
+    scrollbar-gutter: stable;
+}
+&::-webkit-scrollbar {
+    background-color: var(--dark-text);
+    width: 8px;
+}
+&::-webkit-scrollbar-thumb {
+    background-color: var(--light-bg);
+    border-radius: 4px;
+    background-clip: content-box;
+}
+&::-webkit-scrollbar-thumb:hover {
+    background-color: var(--pink);
+}
