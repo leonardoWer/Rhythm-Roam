@@ -43,6 +43,7 @@
     var(--light-bg) 56%);    /* Конец нижнего цвета */
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .hero-text-container {
@@ -59,6 +60,15 @@
 }
 .hero-text__center {
     color: var(--pink);
+}
+.hero-text__bottom {
+    color: var(--dark-text);
+}
+
+.hero-button-container {
+    position: absolute;
+    left: 2rem;
+    bottom: 4rem;
 }
 
 
