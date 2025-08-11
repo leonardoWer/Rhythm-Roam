@@ -45,7 +45,7 @@ gltfLoader.load("/Rhythm-Roam/public/3d/headphones.glb",
 );
 
 // light
-const ambientLight = new AmbientLight(0xffffff, 2);
+const ambientLight = new AmbientLight(0xffffff, 2.2);
 scene.add(ambientLight);
 const topLight = new DirectionalLight(0xffffff, 2);
 topLight.position.set(500, 500, 500);
@@ -74,7 +74,7 @@ let arrPositionModel = [
     },
     {
         id: "headphonesSection",
-        position: {x: 0, y: -2, z: -20},
+        position: {x: 0, y: -2, z: -18},
         rotation: {x: 0.05, y: 3, z: 0.1},
     },
     {
