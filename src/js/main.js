@@ -77,6 +77,12 @@ function initBenefits() {
 
 initBenefits();
 
+const container = document.querySelector('.contacts-container-center__content-container');
+container.appendChild(createGlowLink({
+    title: "Shop Now",
+    onClick: {}
+}));
+
 
 document.addEventListener("DOMContentLoaded", function () {
     initSmoothScroll();

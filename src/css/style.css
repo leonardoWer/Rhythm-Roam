@@ -191,7 +191,7 @@
     background-color: var(--dark-text);
     display: flex;
     justify-content: space-between;
-    padding: 10vh 0;
+    padding: 10vh 0 2vh 0;
     align-items: center;
     overflow: hidden;
 }

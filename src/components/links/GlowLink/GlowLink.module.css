@@ -1,10 +1,15 @@
 .glowLink {
     position: relative;
-    padding: 0.9em 4em;
+    padding: 1.2em 4em;
     color: var(--light-bg);
     font-size: 1.6rem;
     cursor: pointer;
     border-radius: var(--two-border-radius);
+}
+.glowLink:hover {
+    .glowLink__inner {
+        background-color: var(--dark-gray);
+    }
 }
 
 @property --angle {
@@ -15,8 +20,8 @@
 
 .glowLink::before, .glowLink::after {
     content: "";
-    width: 106%;
-    height: 106%;
+    width: 105%;
+    height: 105%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -52,4 +57,5 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.2s ease-out;
 }
