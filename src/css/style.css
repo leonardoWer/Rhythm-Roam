@@ -203,7 +203,7 @@
     flex-wrap: nowrap;
     margin-top: -1rem;
     z-index: 10;
-    background: #000;
+    background: var(--dark-text);
 }
 .pink-line__item {
     background: linear-gradient(to right, var(--pink), rgba(var(--pink-rgb), 0.8), rgba(var(--pink-rgb), 0.5));

@@ -20,6 +20,42 @@ function initSmoothScroll() {
 }
 
 
+function initFadeInScrollTriggerTextAnim() {
+    document.fonts.ready.then(() => {
+        const heroSubtitleSplitText = new SplitText(".hero-subtitle", {type: "words"})
+
+        const heroSubtitleTextTl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".hero-subtitle",
+                start: "top 80%",
+                end: "+=200px",
+                scrub: true,
+            }
+        })
+        heroSubtitleTextTl.from(heroSubtitleSplitText.words, {
+            opacity: 0.5,
+            stagger: 0.2,
+            ease: "power1.out",
+        }, 0)
+    })
+}
+
+function initBaseFadeInText() {
+    const baseFadeInText = document.querySelectorAll("[data-fade-in]");
+    baseFadeInText.forEach((el) => {
+        gsap.from(el, {
+            scrollTrigger: {
+                trigger: el,
+                start: "60% bottom",
+            },
+            yPercent: 80,
+            ease: "power1.out",
+            duration: 0.8,
+        })
+    })
+}
+
+
 function initBenefitsSection() {
 
     const benefitsData = [
@@ -77,42 +113,41 @@ function initBenefitsSection() {
         }, 0.5)
 }
 
+function initTransitionSection() {
+    gsap.from(".transition-img-container", {
+        yPercent: 15,
+        ease: "power1.inOut",
+        scrollTrigger: {
+            trigger: ".transition-img-container",
+            start: "10% 60%",
+            end: "80% 30%",
+            scrub: true,
+            markers: true
+        }
+    });
 
-function initFadeInScrollTriggerTextAnim() {
-    document.fonts.ready.then(() => {
-        const heroSubtitleSplitText = new SplitText(".hero-subtitle", {type: "words"})
+    gsap.to(".pink-line", {
+        height: 0,
+        scrollTrigger: {
+            trigger: ".transition-img-container",
+            start: "center 60%",
+            end: "bottom 20%",
+            scrub: true,
 
-        const heroSubtitleTextTl = gsap.timeline({
-            scrollTrigger: {
-                trigger: ".hero-subtitle",
-                start: "top 80%",
-                end: "+=200px",
-                scrub: true,
-            }
+        }
+    });
+
+    const pinkLineItems = document.querySelectorAll(".pink-line__item");
+    pinkLineItems.forEach((lineItem, index) => {
+        gsap.to(lineItem, {
+            flexBasis: 10 * (index + 1),
+            duration: 3,
+            ease: "power1.inOut",
+            yoyo: true,
+            repeat: -1,
         })
-        heroSubtitleTextTl.from(heroSubtitleSplitText.words, {
-            opacity: 0.5,
-            stagger: 0.2,
-            ease: "power1.out",
-        }, 0)
     })
 }
-
-function initBaseFadeInText() {
-    const baseFadeInText = document.querySelectorAll("[data-fade-in]");
-    baseFadeInText.forEach((el) => {
-        gsap.from(el, {
-            scrollTrigger: {
-                trigger: el,
-                start: "60% bottom",
-            },
-            yPercent: 80,
-            ease: "power1.out",
-            duration: 0.8,
-        })
-    })
-}
-
 
 function initShopSection() {
     const hpShopData = [
@@ -209,6 +244,7 @@ initBaseFadeInText();
 
 // Sections
 initBenefitsSection();
+initTransitionSection();
 initShopSection();
 
 const container = document.querySelector('.contacts-container-center__content-container');
