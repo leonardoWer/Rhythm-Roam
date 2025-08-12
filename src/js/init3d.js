@@ -79,7 +79,12 @@ let arrPositionModel = [
     },
     {
         id: "transitionSection",
-        position: {x: 0, y: -2, z: -1008},
+        position: {x: 0, y: -2, z: -1000},
+        rotation: {x: 0.05, y: 4, z: 0.1},
+    },
+    {
+        id: "shopSection",
+        position: {x: 0, y: -2, z: -1000},
         rotation: {x: 0.05, y: 4, z: 0.1},
     },
     {

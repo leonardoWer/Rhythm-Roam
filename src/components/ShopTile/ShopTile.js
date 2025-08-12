@@ -30,7 +30,7 @@ export function createShopTile({title, description,
         </div>
       
         <div class="${styles.priceContainer}">
-            <span class="${styles.price}">$ ${price}</span>
+            <span class="${styles.price}">$${price}</span>
         </div>
     `;
 
