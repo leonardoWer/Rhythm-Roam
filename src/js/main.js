@@ -122,7 +122,6 @@ function initTransitionSection() {
             start: "10% 60%",
             end: "80% 30%",
             scrub: true,
-            markers: true
         }
     });
 
@@ -133,7 +132,6 @@ function initTransitionSection() {
             start: "center 60%",
             end: "bottom 20%",
             scrub: true,
-
         }
     });
 
