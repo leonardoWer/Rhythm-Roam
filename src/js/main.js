@@ -1,8 +1,9 @@
 import gsap from 'gsap';
 import {ScrollTrigger} from "gsap/ScrollTrigger";
 import {ScrollSmoother} from "gsap/ScrollSmoother";
+import {SplitText} from "gsap/SplitText";
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother)
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother, SplitText)
 
 import {createGlowLink} from "s/components/links/GlowLink/GlowLink.js";
 import {createBenefitTile} from "s/components/BenefitTile/BenefitTile.js";
@@ -75,6 +76,44 @@ function initBenefits() {
 }
 
 
+function initFadeInScrollTriggerTextAnim() {
+    document.fonts.ready.then(() => {
+        const heroSubtitleSplitText = new SplitText(".hero-subtitle", {type: "words"})
+
+        const heroSubtitleTextTl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".hero-subtitle",
+                start: "top 80%",
+                end: "+=200px",
+                scrub: true,
+            }
+        })
+        heroSubtitleTextTl.from(heroSubtitleSplitText.words, {
+            opacity: 0.5,
+            stagger: 0.2,
+            ease: "power1.out",
+        }, 0)
+    })
+}
+
+function initBaseFadeInText() {
+    const baseFadeInText = document.querySelectorAll("[data-fade-in]");
+    baseFadeInText.forEach((el) => {
+        gsap.from(el, {
+            scrollTrigger: {
+                trigger: el,
+                start: "60% bottom",
+            },
+            yPercent: 80,
+            ease: "power1.out",
+            duration: 0.8,
+        })
+    })
+
+}
+
+initFadeInScrollTriggerTextAnim();
+initBaseFadeInText();
 initBenefits();
 
 const container = document.querySelector('.contacts-container-center__content-container');

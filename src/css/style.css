@@ -109,7 +109,7 @@
 
 
 .headphones-container {
-    height: 120vh;
+    min-height: 120vh;
     padding-top: 20vh;
     background: linear-gradient(to bottom,
         var(--light-bg) 0,
@@ -136,16 +136,17 @@
     height: 40%;
     width: 100%;
     position: relative;
+    overflow: hidden;
 }
 .headphones-container-center-wrapper__blur {
     position: absolute;
     inset: 0;
     background: linear-gradient(to right,
-        var(--dark-gray) 5%,
-        rgba(72, 72, 72, 0.4) 15%, /* Полупрозрачный серый */
+        var(--dark-text) 5%,
+        rgba(72, 72, 72, 0.5) 15%, /* Полупрозрачный серый */
         transparent 50%,
-        rgba(72, 72, 72, 0.4) 85%, /* Полупрозрачный серый */
-        var(--dark-gray) 95%
+        rgba(72, 72, 72, 0.5) 85%, /* Полупрозрачный серый */
+        var(--dark-text) 95%
     );
     z-index: 1;
     opacity: 0.6;
@@ -171,20 +172,42 @@
     overflow: hidden;
     flex-shrink: 0;
 }
-.headphones-container-center__blur-left, .headphones-container-center__blur-right {
-    position: absolute;
-    height: 100%;
-    width: 30%;
-}
-.headphones-container-center__blur-left {
-    left: 0;
-    background: linear-gradient(to left, transparent 50%, #484848);
-}
 
 .headphones-container__bottom {
     width: 50%;
     text-align: center;
     font-size: 2rem;
+}
+
+
+.transition-content-container {
+    background: var(--dark-text);
+    padding: 20vh 0 5vh 0;
+    position: relative;
+    z-index: 30;
+}
+
+.transition-img-container {
+    height: 100vh;
+    width: 100%;
+}
+.transition-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.pink-line {
+    height: 20vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: -2vh;
+}
+.pink-line__item {
+    background: linear-gradient(to right, var(--pink), rgba(var(--pink-rgb), 0.8), rgba(var(--pink-rgb), 0.5));
+    height: 100%;
+    flex-basis: 100%;
 }
 
 .contacts-container {
