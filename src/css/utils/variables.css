@@ -1,13 +1,27 @@
 :root {
-    /* Цвета */
+    /* Primary colors */
     --light-bg: #fafaff;
     --dark-text: #1c1c1c;
+    --darker-gray: #181818;
     --dark-gray: #484848;
     --pink: #ff84d5;
 
     --dark-text-rgb: 28, 28, 28;
     --light-bg-rgb: 231, 231, 241;
     --pink-rgb: 253, 132, 212;
+
+    /* Headphones color */
+    --classic-hp-bg-color: #ab96a4;
+    --classic-hp-color: #ad99a5;
+
+    --black-hp-bg-color: #202222;
+
+    --blue-hp-bg-color: #424b76;
+    --blue-hp-color-1: #3e407e;
+    --blue-hp-color-2: #97aadf;
+
+    --white-hp-bg-color: #d3d9de;
+    --white-hp-color-1: #dee5e9;
 
     /* Градиенты */
 
