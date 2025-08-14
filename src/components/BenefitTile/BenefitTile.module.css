@@ -10,6 +10,7 @@
     background: var(--dark-text);
     flex-basis: 100%;
     min-width: 300px;
+    color: var(--light-bg);
 }
 
 .tile:hover {

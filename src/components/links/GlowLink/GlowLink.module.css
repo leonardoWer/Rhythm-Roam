@@ -49,8 +49,8 @@
 
 .glowLink__inner {
     border-radius: var(--two-border-radius);
-    background-color: var(--dark-text);
-    border: 1px solid #383838;
+    background-color: var(--darker-gray);
+    border: 2px solid #383838;
     z-index: 1;
     position: absolute;
     inset: 0;

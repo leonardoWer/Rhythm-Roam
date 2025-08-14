@@ -1,0 +1,21 @@
+.rhytmContainer {
+    background: var(--dark-text);
+    min-height: 30vh;
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8em;
+    margin: -1px 0;
+}
+
+.rhytmContainer__firstLine {
+    font-size: clamp(4rem, 3.333rem + 3.33vw, 10rem);
+    color: var(--light-bg);
+}
+.rhytmContainer__secondLine {
+    display: flex;
+    gap: 0.2em;
+    font-family: var(--geist-bold-font);
+    font-size: clamp(4rem, 3.333rem + 3.33vw, 10rem);
+    color: var(--pink);
+}

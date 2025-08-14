@@ -9,11 +9,13 @@ import {initSmoothScroll} from "s/js/gsap/smoothScroll.js";
 import {createHeroSection} from "s/components/sections/HeroSection/HeroSection.js";
 import {createAboutSection} from "s/components/sections/AboutSection/AboutSection.js";
 import {createBenefitsSection} from "s/components/sections/BenefitsSection/BenefitsSection.js";
+import {createRhytmSection} from "s/components/sections/RhytmSection/RhytmSection.js";
 import {createTransitionSection} from "s/components/sections/TransitionSection/TransitionSection.js";
 import {createShopSection} from "s/components/sections/ShopSection/ShopSection.js";
 import {createContactsSection} from "s/components/sections/ContactsSection/ContactsSection.js";
 
 import {createBenefitTile} from "s/components/BenefitTile/BenefitTile.js";
+
 
 // SmoothScroll
 initSmoothScroll();
@@ -23,6 +25,7 @@ const page = document.getElementById("smooth-content");
 page.appendChild(createHeroSection());
 page.appendChild(createAboutSection());
 page.appendChild(createBenefitsSection());
+page.appendChild(createRhytmSection());
 page.appendChild(createTransitionSection());
 page.appendChild(createShopSection());
 page.appendChild(createContactsSection());

@@ -4,10 +4,9 @@ import {ScrollTrigger} from "gsap/ScrollTrigger";
 
 export function createBenefitsSection() {
     const section = document.createElement('section');
-    section.id = 'headphonesSection';
+    section.id = 'benefitsSection';
     section.innerHTML = `
         <div class="container headphones-container">
-
             <div class="headphones-content-container">
 
               <div class="headphones-container__top">
@@ -23,15 +22,7 @@ export function createBenefitsSection() {
                 </div>
               </div>
 
-
-              <div class="headphones-container__bottom">
-                <p class="headphones-container-bottom__text">
-                  Built for Your Rhythm
-                </p>
-              </div>
-
             </div>
-
         </div>
     `
 
@@ -47,7 +38,6 @@ export function createBenefitsSection() {
                 start: "20% 10%",
                 end: "+=300px",
                 scrub: true,
-                markers: true
             }
         })
     })

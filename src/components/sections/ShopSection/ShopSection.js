@@ -97,18 +97,46 @@ export function createShopSection() {
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: shopContainer,
-            start: "bottom bottom",
-            end: "+=4000px",
+            start: "top top",
+            end: "+=6000px",
             pin: true,
             scrub: true,
         }
     })
-    tl.from(leftContainer, {
+    tl.fromTo(leftContainer, {
         yPercent: -75
+    }, {
+        yPercent: -50,
+        ease: "power1.inOut"
     }, 0)
         .to(rightContainer, {
-            yPercent: -75
+            yPercent: -25,
+            ease: "power1.inOut"
         }, 0)
+
+        .fromTo(leftContainer, {
+            yPercent: -50
+        }, {
+            yPercent: -25,
+            ease: "power1.inOut"
+        }, 0.5)
+        .to(rightContainer, {
+            yPercent: -50,
+            ease: "power1.inOut"
+        }, 0.5)
+
+        .fromTo(leftContainer, {
+            yPercent: -25
+        }, {
+            yPercent: 0,
+            ease: "power1.inOut"
+        }, 1)
+        .to(rightContainer, {
+            yPercent: -75,
+            ease: "power1.inOut"
+        }, 1)
+
+
 
     return section;
 }

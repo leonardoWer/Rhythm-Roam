@@ -73,9 +73,14 @@ let arrPositionModel = [
         rotation: {x: 0.1, y: 2.2, z: -0.05},
     },
     {
-        id: "headphonesSection",
+        id: "benefitsSection",
         position: {x: 0, y: -2, z: -18},
         rotation: {x: 0.05, y: 3, z: 0.1},
+    },
+    {
+        id: "rhytmSection",
+        position: {x: 1, y: -2.1, z: -19},
+        rotation: {x: 0.1, y: 3.5, z: 0.3},
     },
     {
         id: "transitionSection",
