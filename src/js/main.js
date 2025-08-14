@@ -27,7 +27,6 @@ page.appendChild(createTransitionSection());
 page.appendChild(createShopSection());
 page.appendChild(createContactsSection());
 
-initTransitionSection();
 
 function initBaseFadeInText() {
     const baseFadeInText = document.querySelectorAll("[data-fade-in]");
@@ -40,40 +39,6 @@ function initBaseFadeInText() {
             yPercent: 80,
             ease: "power1.out",
             duration: 0.8,
-        })
-    })
-}
-
-function initTransitionSection() {
-    gsap.from(".transition-img-container", {
-        yPercent: 15,
-        ease: "power1.inOut",
-        scrollTrigger: {
-            trigger: ".transition-img-container",
-            start: "10% 60%",
-            end: "80% 30%",
-            scrub: true,
-        }
-    });
-
-    gsap.to(".pink-line", {
-        height: 0,
-        scrollTrigger: {
-            trigger: ".transition-img-container",
-            start: "center 60%",
-            end: "bottom 20%",
-            scrub: true,
-        }
-    });
-
-    const pinkLineItems = document.querySelectorAll(".pink-line__item");
-    pinkLineItems.forEach((lineItem, index) => {
-        gsap.to(lineItem, {
-            flexBasis: 10 * (index + 1),
-            duration: 3,
-            ease: "power1.inOut",
-            yoyo: true,
-            repeat: -1,
         })
     })
 }

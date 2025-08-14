@@ -18,7 +18,8 @@ export function createContactsSection() {
               <ul class="${styles['contacts-container__list']}">
                 <li class="${styles['contacts-container-list__item']}">home</li>
                 <li class="${styles['contacts-container-list__item']}">about</li>
-                <li class="${styles['contacts-container-list__item']}">headphones</li>
+                <li class="${styles['contacts-container-list__item']}">benefits</li>
+                <li class="${styles['contacts-container-list__item']}">shop</li>
                 <li class="${styles['contacts-container-list__item']}">contact</li>
               </ul>
             </div>

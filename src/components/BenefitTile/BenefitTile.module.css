@@ -42,5 +42,5 @@
 }
 .tile__title {
     font-family: var(--geist-bold-font);
-    font-size: 3rem;
+    font-size: clamp(1rem, 0.778rem + 1.11vw, 3rem);
 }

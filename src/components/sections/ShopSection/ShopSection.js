@@ -99,7 +99,7 @@ export function createShopSection() {
             trigger: shopContainer,
             start: "top top",
             end: "+=6000px",
-            // pin: true,
+            pin: true,
             scrub: true,
         }
     })
@@ -135,7 +135,6 @@ export function createShopSection() {
             yPercent: -75,
             ease: "power1.inOut"
         }, 1)
-
 
 
     return section;
