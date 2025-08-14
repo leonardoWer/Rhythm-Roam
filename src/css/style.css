@@ -160,3 +160,31 @@
     display: flex;
     flex-direction: column;
 }
+
+
+.buy-container {
+    background-color: black;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2em 0;
+}
+.buy-text {
+    color: var(--light-bg) !important;
+    font-size: clamp(0.8rem, 0.578rem + 1.11vw, 2.8rem);
+    position: relative;
+}
+.buy-text::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -0.2em;
+    height: 2px;
+    width: 0;
+    background-color: var(--pink);
+    transition: all 0.5s ease-in-out;
+}
+.buy-text:hover::after {
+    width: 100%;
+}

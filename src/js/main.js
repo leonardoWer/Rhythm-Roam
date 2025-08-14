@@ -26,7 +26,17 @@ page.appendChild(createRhytmSection());
 page.appendChild(createTransitionSection());
 page.appendChild(createShopSection());
 page.appendChild(createContactsSection());
+page.appendChild(createBuyContainer());
 
+function createBuyContainer() {
+    const buyContainer = document.createElement("div");
+    buyContainer.className = "buy-container";
+    buyContainer.innerHTML = `
+        <a class="buy-text" href="https://t.me/leonardo_Wer">You can buy this website</a>
+    `;
+
+    return buyContainer;
+}
 
 function initBaseFadeInText() {
     const baseFadeInText = document.querySelectorAll("[data-fade-in]");
