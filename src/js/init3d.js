@@ -74,12 +74,14 @@ let arrPositionModel = [
     },
     {
         id: "benefitsSection",
-        position: {x: 0, y: -2, z: -18},
-        rotation: {x: 0.05, y: 3, z: 0.1},
+        position: {x: 0, y: -2.1, z: -19},
+        rotation: {x: 0, y: 3.15, z: 0},
+        // position: {x: 0, y: -2, z: -18},
+        // rotation: {x: 0.05, y: 3, z: 0.1},
     },
     {
         id: "rhytmSection",
-        position: {x: 1, y: -2.1, z: -19},
+        position: {x: 0, y: -2.1, z: -19},
         rotation: {x: 0.1, y: 3.5, z: 0.3},
     },
     {
