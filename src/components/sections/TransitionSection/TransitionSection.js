@@ -29,14 +29,13 @@ export function createTransitionSection() {
     const pinkLineItems = pinkLine.querySelectorAll(".pink-line__item");
 
     gsap.from(imgContainer, {
-        yPercent: 15,
+        yPercent: 10,
         ease: "power1.inOut",
         scrollTrigger: {
             trigger: imgContainer,
             start: "top 60%",
-            end: "80% 60%",
+            end: "70% 80%",
             scrub: true,
-
         }
     });
 
@@ -47,7 +46,6 @@ export function createTransitionSection() {
             start: "center 60%",
             end: "bottom 20%",
             scrub: true,
-            markers: true
         }
     });
     pinkLineItems.forEach((lineItem, index) => {
