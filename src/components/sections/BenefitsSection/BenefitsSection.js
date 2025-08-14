@@ -45,21 +45,5 @@ export function createBenefitsSection() {
     const tilesContainer = section.querySelector(`.${styles['benefits-container__center']}`);
     benefitsData.forEach(tileData => {tilesContainer.appendChild(createBenefitTile(tileData));})
 
-    const bottomText = section.querySelector('.headphones-container-bottom__text');
-    document.fonts.ready.then(() => {
-        const bottomSplitText = new SplitText(bottomText, {type: "words"});
-        gsap.from(bottomSplitText.words, {
-            opacity: 0.5,
-            stagger: 0.5,
-            ease: "power2.out",
-            scrollTrigger: {
-                trigger: section,
-                start: "20% 10%",
-                end: "+=300px",
-                scrub: true,
-            }
-        })
-    })
-
     return section;
 }

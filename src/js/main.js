@@ -14,9 +14,6 @@ import {createTransitionSection} from "s/components/sections/TransitionSection/T
 import {createShopSection} from "s/components/sections/ShopSection/ShopSection.js";
 import {createContactsSection} from "s/components/sections/ContactsSection/ContactsSection.js";
 
-import {createBenefitTile} from "s/components/BenefitTile/BenefitTile.js";
-
-
 // SmoothScroll
 initSmoothScroll();
 

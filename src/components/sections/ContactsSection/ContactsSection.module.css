@@ -1,0 +1,116 @@
+.contacts-container {
+    background-color: var(--dark-text);
+    display: flex;
+    justify-content: space-between;
+    padding: 10vh 0 2vh 0;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+.contacts-container__center {
+    width: 60%;
+    height: 90vh;
+    flex-shrink: 0;
+    background-color: var(--light-bg);
+    border-radius: var(--border-radius);
+    padding: 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contacts-container-center__logo-container {
+    font-family: var(--geist-bold-font);
+    font-size: 2.2rem;
+}
+.contacts-container-center__content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+}
+.contacts-container-center-content-container__title {
+    font-size: 2rem;
+}
+.contacts-container-center-content-container__button {
+    border-radius: var(--two-border-radius);
+    background-color: var(--pink);
+    padding: 1.5em 3em;
+    color: var(--dark-text) !important;
+}
+
+
+.contacts-container__left, .contacts-container__right {
+    background-color: var(--pink);
+    width: 20%;
+    height: 100vh;
+    flex-shrink: 1;
+    border-radius: var(--two-border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.contacts-container__left {
+    margin-left: -2%;
+    text-align: left;
+}
+.contacts-container__right {
+    margin-right: -2%;
+    text-align: right;
+}
+
+.contacts-container__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.contacts-container-left__title, .contacts-container-right__title {
+    position: absolute;
+    top: 50%;
+    z-index: 20;
+    font-family: var(--geist-bold-font);
+    font-size: 8rem;
+    mask-image: linear-gradient(to bottom, var(--pink), rgba(var(--pink-rgb), var(--opacity)), rgba(var(--pink-rgb), 0.5));
+    animation: opacityMove 6s linear infinite;
+}
+@property --opacity {
+    syntax: "<number>";
+    initial-value: 0.8;
+    inherits: false;
+}
+@keyframes opacityMove {
+    0% {
+        --opacity: 0.8;
+    }
+    20% {
+        --opacity: 0.6;
+    }
+    60% {
+        --opacity: 0.2;
+    }
+    80% {
+        --opacity: 0.8;
+    }
+    90% {
+        --opacity: 0.9;
+    }
+    100% {
+        --opacity: 0.8;
+    }
+}
+
+.contacts-container-left__title {
+    left: -2em;
+    transform: rotateZ(-90deg);
+}
+.contacts-container-right__title {
+    right: -1.5em;
+    transform: rotateZ(90deg);
+}
+
+.contacts-container-list__item {
+    font-size: 1.6rem;
+    cursor: pointer;
+}
