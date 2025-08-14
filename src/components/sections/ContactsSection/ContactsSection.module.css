@@ -49,15 +49,18 @@
     border-radius: var(--two-border-radius);
     display: flex;
     align-items: center;
-    justify-content: center;
 }
 .contacts-container__left {
     margin-left: -2%;
     text-align: left;
+    justify-content: flex-end;
+    padding-right: 3em;
 }
 .contacts-container__right {
     margin-right: -2%;
     text-align: right;
+    justify-content: flex-start;
+    padding-left: 3em;
 }
 
 .contacts-container__list {
@@ -71,7 +74,7 @@
     top: 50%;
     z-index: 20;
     font-family: var(--geist-bold-font);
-    font-size: 8rem;
+    font-size: clamp(2rem, 1.333rem + 3.33vw, 8rem);
     mask-image: linear-gradient(to bottom, var(--pink), rgba(var(--pink-rgb), var(--opacity)), rgba(var(--pink-rgb), 0.5));
     animation: opacityMove 6s linear infinite;
 }
