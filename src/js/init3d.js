@@ -16,25 +16,14 @@ const scene = new Scene();
 
 let headphones;
 const gltfLoader = new GLTFLoader();
-gltfLoader.load("/Rhythm-Roam/public/3d/headphones.glb",
+gltfLoader.load(
+    new URL('/3d/headphones.glb', import.meta.url).href,
     function(gltf) {
         headphones = gltf.scene;
 
         // hero
         headphones.position.set(2.4, -2, -10);
         headphones.rotation.set(0.1, 0.7, -0.05)
-
-        //about
-        // headphones.position.set(-2.4, -2, -8);
-        // headphones.rotation.set(0.1, 2.2, -0.05);
-
-        //hp
-        // headphones.position.set(0, -2, -20);
-        // headphones.rotation.set(0.05, 3, 0.1);
-
-        //hp
-        // headphones.position.set(0, -2, -25);
-        // headphones.rotation.set(-0.05, 5, 0.15);
 
         scene.add(headphones);
     },
