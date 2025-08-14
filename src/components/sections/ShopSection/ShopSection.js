@@ -8,7 +8,7 @@ export function createShopSection() {
     const section = document.createElement('section');
     section.id = 'shopSection';
     section.innerHTML = `
-        <div class="shop-container">
+        <div class="container shop-container">
 
             <div class="shop-container__left">
               <div class="shop-container-left__list"></div>
@@ -99,7 +99,7 @@ export function createShopSection() {
             trigger: shopContainer,
             start: "top top",
             end: "+=6000px",
-            pin: true,
+            // pin: true,
             scrub: true,
         }
     })
