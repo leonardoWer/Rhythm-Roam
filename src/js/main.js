@@ -6,6 +6,7 @@ gsap.registerPlugin(ScrollTrigger, SplitText)
 
 import {initSmoothScroll} from "s/js/gsap/smoothScroll.js";
 
+import {createTopMenu} from "s/components/TopMenu/TopMenu.js";
 import {createHeroSection} from "s/components/sections/HeroSection/HeroSection.js";
 import {createAboutSection} from "s/components/sections/AboutSection/AboutSection.js";
 import {createBenefitsSection} from "s/components/sections/BenefitsSection/BenefitsSection.js";
@@ -16,6 +17,9 @@ import {createContactsSection} from "s/components/sections/ContactsSection/Conta
 
 // SmoothScroll
 initSmoothScroll();
+
+// Top Menu
+document.querySelector("header").appendChild(createTopMenu());
 
 // Sections
 const page = document.getElementById("smooth-content");
