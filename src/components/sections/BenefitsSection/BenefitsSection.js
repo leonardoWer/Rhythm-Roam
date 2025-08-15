@@ -43,7 +43,29 @@ export function createBenefitsSection() {
     ];
 
     const tilesContainer = section.querySelector(`.${styles['benefits-container__center']}`);
-    benefitsData.forEach(tileData => {tilesContainer.appendChild(createBenefitTile(tileData));})
+    const tilesData = [];
+    benefitsData.forEach(tileData => {
+        const tile = createBenefitTile(tileData);
+        tilesData.push(tile);
+        tilesContainer.appendChild(tile);
+    });
+
+    // Tiles anim
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: tilesContainer,
+            start: "top 90%",
+            end: "bottom 80%",
+            scrub: 2
+        },
+    })
+
+    tl.from(tilesData, {
+        scale: 0.9,
+        yPercent: -10,
+        stagger: 0.2,
+        ease: "power2.out",
+    })
 
     return section;
 }
