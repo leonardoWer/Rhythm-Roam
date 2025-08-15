@@ -16,8 +16,35 @@ export function createHeroSection() {
         </div>
     `
 
+    const titleData = section.querySelectorAll('.hero-text-container > h2');
     const subtitle = section.querySelector('.hero-subtitle');
 
+
+    const tl = gsap.timeline();
+    // Title anim
+    tl.from(titleData[0], {
+        yPercent: -100,
+        duration: 0.5,
+        ease: "power2.out",
+    }, 0)
+    tl.from(titleData[1], {
+        xPercent: -100,
+        duration: 1,
+        ease: "sine.inOut",
+    }, 0)
+    tl.from(titleData[2], {
+        yPercent: 100,
+        duration: 0.5,
+        ease: "power2.out",
+    }, 0)
+
+    tl.from(subtitle, {
+        opacity: 0,
+        ease: "power1.inOut",
+        duration: 0.8
+    }, 2.5)
+
+    // Subtitle anim
     document.fonts.ready.then(() => {
         const heroSubtitleSplitText = new SplitText(subtitle, {type: "words, chars"})
 

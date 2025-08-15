@@ -49,6 +49,7 @@
 .hero-text-container {
     display: flex;
     flex-direction: column;
+    overflow: hidden;
 }
 .hero-text__top, .hero-text__center, .hero-text__bottom {
     font-family: var(--geist-bold-font);

@@ -22,8 +22,20 @@ gltfLoader.load(
         headphones = gltf.scene;
 
         // hero
-        headphones.position.set(2.4, -2, -10);
-        headphones.rotation.set(0.1, 0.7, -0.05)
+        gsap.to(headphones.position, {
+            x: 2.4,
+            y: -2,
+            z: -10,
+            ease: "power2.out",
+            duration: 2.5
+        });
+        gsap.to(headphones.rotation, {
+            x: 0.1,
+            y: 0.7,
+            z: -0.05,
+            ease: "power2.inOut",
+            duration: 3
+        })
 
         scene.add(headphones);
     },
