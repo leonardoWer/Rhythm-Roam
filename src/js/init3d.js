@@ -27,14 +27,14 @@ gltfLoader.load(
             y: -2,
             z: -10,
             ease: "power2.out",
-            duration: 2.5
+            duration: 2.2
         });
         gsap.to(headphones.rotation, {
             x: 0.1,
             y: 0.7,
             z: -0.05,
             ease: "power2.inOut",
-            duration: 3
+            duration: 2.8
         })
 
         scene.add(headphones);

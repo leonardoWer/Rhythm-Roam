@@ -11,50 +11,6 @@
 }
 
 
-.top-menu {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 100;
-    padding: 1em 2em;
-    backdrop-filter: blur(10px);
-    mix-blend-mode: difference;
-}
-.logo {
-    color: var(--light-bg);
-}
-
-.top-menu-list {
-    display: flex;
-    gap: 1em;
-    color: var(--light-bg);
-}
-.top-menu-list__item, .top-menu-list__item a {
-    color: var(--light-bg) !important;
-    font-size: 1.2rem
-}
-.top-menu-list__item {
-    position: relative;
-    width: fit-content;
-}
-.top-menu-list__item::after {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 2px;
-    left: 0;
-    bottom: -0.2em;
-    background: var(--pink);
-    transition: all 0.4s ease-in-out;
-}
-.top-menu-list__item.active::after {
-    width: 100%;
-}
-
-
 .hero-container {
     height: 100vh;
     width: 100%;
@@ -194,7 +150,7 @@
 }
 .buy-text {
     color: var(--light-bg) !important;
-    font-size: clamp(0.8rem, 0.578rem + 1.11vw, 2.8rem);
+    font-size: clamp(0.6rem, 0.316rem + 1.42vw, 2rem);
     position: relative;
 }
 .buy-text::after {

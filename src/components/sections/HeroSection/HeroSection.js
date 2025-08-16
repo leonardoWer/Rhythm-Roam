@@ -24,17 +24,17 @@ export function createHeroSection() {
     // Title anim
     tl.from(titleData[0], {
         yPercent: -100,
-        duration: 0.5,
+        duration: 1,
         ease: "power2.out",
     }, 0)
     tl.from(titleData[1], {
         xPercent: -100,
-        duration: 1,
+        duration: 1.5,
         ease: "sine.inOut",
     }, 0)
     tl.from(titleData[2], {
         yPercent: 100,
-        duration: 0.5,
+        duration: 1,
         ease: "power2.out",
     }, 0)
 
@@ -42,13 +42,17 @@ export function createHeroSection() {
         opacity: 0,
         ease: "power1.inOut",
         duration: 0.8
-    }, 2.5)
+    }, 2)
 
     // Subtitle anim
     document.fonts.ready.then(() => {
         const heroSubtitleSplitText = new SplitText(subtitle, {type: "words, chars"})
 
-        const heroSubtitleTextTl = gsap.timeline({
+        gsap.to(heroSubtitleSplitText.chars, {
+            rotateZ: "20deg",
+            yPercent: 100,
+            stagger: 0.4,
+            ease: "power1.in",
             scrollTrigger: {
                 trigger: subtitle,
                 start: "top 85%",
@@ -56,18 +60,6 @@ export function createHeroSection() {
                 scrub: true,
             }
         })
-
-        heroSubtitleTextTl.from(heroSubtitleSplitText.words, {
-            opacity: 0.5,
-            stagger: 0.5,
-            ease: "power3.out",
-        }, 0)
-            .to(heroSubtitleSplitText.chars, {
-                rotateZ: "20deg",
-                yPercent: 100,
-                stagger: 0.4,
-                ease: "power1.in",
-            })
     })
 
     return section;

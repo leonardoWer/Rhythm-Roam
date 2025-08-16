@@ -50,7 +50,8 @@ function initBaseFadeInText() {
                 trigger: el,
                 start: "60% bottom",
             },
-            yPercent: 80,
+            yPercent: 90,
+            autoAlpha: true,
             ease: "power1.out",
             duration: 0.8,
         })

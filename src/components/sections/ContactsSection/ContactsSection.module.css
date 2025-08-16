@@ -23,7 +23,16 @@
 .contacts-container-center__logo-container {
     font-family: var(--geist-bold-font);
     font-size: 2.2rem;
+    color: var(--dark-text);
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
 }
+.contacts-container-center__logo-container img {
+    height: 60px;
+    mix-blend-mode: difference;
+}
+
 .contacts-container-center__content-container {
     display: flex;
     flex-direction: column;

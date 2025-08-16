@@ -8,32 +8,32 @@ import logo from "/logo/logo-horizontal.svg";
 
 export function createTopMenu() {
     const topMenu = document.createElement("nav");
-    topMenu.classList.add("top-menu");
+    topMenu.classList.add(styles["top-menu"]);
     topMenu.innerHTML = `
-        <div class="top-menu__left">
+        <div class="${styles['top-menu__left']}">
           <a href="heroSection" class="${styles.logoWrapper}">
             <img src="${logo}" alt="logo" class="${styles.logo}"/>
           </a>
         </div>
 
-        <div class="top-menu__right">
-          <ul class="top-menu-list">
-            <li class="top-menu-list__item">
+        <div class="${styles['top-menu__right']}">
+          <ul class="${styles['top-menu-list']}">
+            <li class="${styles['top-menu-list__item']}">
                 <a href="#aboutSection">
                     about
                 </a>
             </li>
-            <li class="top-menu-list__item">
+            <li class="${styles['top-menu-list__item']}">
                 <a href="#benefitsSection">
                     benefits
                 </a>
             </li>
-            <li class="top-menu-list__item">
+            <li class="${styles['top-menu-list__item']}">
                 <a href="#shopSection">
                     shop
                 </a>
             </li>
-            <li class="top-menu-list__item">
+            <li class="${styles['top-menu-list__item']}">
                 <a href="#contactsSection">
                     contacts
                 </a>

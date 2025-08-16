@@ -6,6 +6,8 @@ import {SplitText} from "gsap/SplitText";
 
 import {createGlowLink} from "s/components/links/GlowLink/GlowLink.js";
 
+import logo from "/logo/logo.svg";
+
 export function createContactsSection() {
     const section = document.createElement('section');
     section.id = 'contactsSection';
@@ -26,7 +28,8 @@ export function createContactsSection() {
 
             <div class="${styles['contacts-container__center']}">
               <div class="${styles['contacts-container-center__logo-container']}">
-                RHYTM & ROAM
+                <img src="${logo}" alt="logo"/>
+                <h4>RHYTHM & ROAM</h4>
               </div>
 
               <div class="${styles['contacts-container-center__content-container']}">
