@@ -1,13 +1,19 @@
+import styles from "./TopMenu.module.css";
+
 import gsap from "gsap";
 import {ScrollToPlugin} from "gsap/ScrollToPlugin";
 gsap.registerPlugin(ScrollToPlugin);
+
+import logo from "/logo/logo-horizontal.svg";
 
 export function createTopMenu() {
     const topMenu = document.createElement("nav");
     topMenu.classList.add("top-menu");
     topMenu.innerHTML = `
         <div class="top-menu__left">
-          <span class="logo">RHYTM & ROAM</span>
+          <a href="heroSection" class="${styles.logoWrapper}">
+            <img src="${logo}" alt="logo" class="${styles.logo}"/>
+          </a>
         </div>
 
         <div class="top-menu__right">

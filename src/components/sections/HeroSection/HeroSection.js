@@ -7,7 +7,7 @@ export function createHeroSection() {
     section.innerHTML = `
         <div class="hero-container">
             <div class="hero-text-container">
-              <h2 class="hero-text__top">RHYTM</h2>
+              <h2 class="hero-text__top">RHYTHM</h2>
               <h2 class="hero-text__center">&</h2>
               <h2 class="hero-text__bottom">ROAM</h2>
             </div>
