@@ -11,7 +11,7 @@ export function createTopMenu() {
     topMenu.classList.add(styles["top-menu"]);
     topMenu.innerHTML = `
         <div class="${styles['top-menu__left']}">
-          <a href="heroSection" class="${styles.logoWrapper}">
+          <a href="#heroSection" class="${styles.logoWrapper}">
             <img src="${logo}" alt="logo" class="${styles.logo}"/>
           </a>
         </div>
@@ -42,31 +42,39 @@ export function createTopMenu() {
         </div>
     `
 
-    const topMenuItems = topMenu.querySelectorAll(".top-menu-list__item");
+    const topMenuItems = topMenu.querySelectorAll(`.${styles['top-menu-list__item']}`);
+    const logoLink = topMenu.querySelector(`.${styles.logoWrapper}`);
 
     function setupSmoothScroll() {
+
+        const handleClick = (link, e) => {
+            e.preventDefault();
+
+            const targetId = link.getAttribute("href");
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                gsap.to(window, {
+                    duration: 0.8,
+                    scrollTo: {
+                        y: targetElement,
+                    },
+                    ease: "power3.inOut"
+                });
+            } else {
+                console.warn(`Элемент с ID "${targetId}" не найден на странице.`);
+            }
+        }
+
         topMenuItems.forEach(item => {
             const link = item.querySelector('a');
 
             link.addEventListener("click", (e) => {
-                e.preventDefault();
-
-                const targetId = link.getAttribute("href");
-                const targetElement = document.querySelector(targetId);
-
-                if (targetElement) {
-                    gsap.to(window, {
-                        duration: 0.8,
-                        scrollTo: {
-                            y: targetElement,
-                        },
-                        ease: "power3.inOut"
-                    });
-                } else {
-                    console.warn(`Элемент с ID "${targetId}" не найден на странице.`);
-                }
+                handleClick(link, e);
             });
         });
+
+        logoLink.addEventListener("click", (e) => handleClick(logoLink, e));
     }
 
     // Вызываем функцию, чтобы настроить скролл
